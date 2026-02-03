@@ -73,9 +73,9 @@ function draw() {
     score++;
     scoreEl.textContent = score;
     food = {
-      x: Math.floor(Math.random() * 30) * 8,
-      y: Math.floor(Math.random() * 30) * 8
-    };
+      x: Math.floor(Math.random() * 10) * 8,
+      y: Math.floor(Math.random() * 10) * 8
+    }
   } else {
     snake.pop();
   }
