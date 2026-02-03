@@ -1,10 +1,124 @@
 body {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  margin: 0;
+  min-height: 100vh;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-canvas {
-  background: #000;
-  border: 3px solid #4CAF50;
+.screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
+
+/* Imagen del Nokia */
+.device {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background: url("images/images-removebg-preview.png") no-repeat center;
+  background-size: contain;
+}
+.title-game{
+  font-size: x-large;
+  font-weight:bold;
+  font-family: 'Courier New', Courier, monospace;
+  color: aliceblue;
+}
+/* Pantalla */
+#game {
+  position: absolute;
+  top: 115px;    /* ajusta según tu imagen */
+  left: 110px;
+  width: 180px;
+  height: 170px;
+  background: rgb(45, 209, 23);
+  border-radius: 5px;
+}
+
+/* Puntaje */
+.score {
+  color: #0f0;
+  font-size: 1.1rem;
+}
+
+/* Botón debajo del Nokia */
+.button-start {
+  width: 200px;
+  padding: 10px;
+  border-radius: 999px;
+  border: none;
+  background: #4c6faf;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.controls {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.middle {
+  display: flex;
+  gap: 12px;
+}
+
+.controls button {
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  border: none;
+  background: #4c7aaf3e;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.controls button:active {
+  transform: scale(0.95);
+}
+.device {
+  position: relative;
+}
+
+/* CONTROLES FLOTANTES */
+.controls {
+  position: absolute;
+  bottom: 80px;   /* sube/baja */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;    /* encima del Nokia */
+}
+
+/* El resto igual */
+.middle {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.controls button {
+  width: 60px;
+  height: 30px;
+  font-size: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;        /* separación vertical */
+}
+
+.middle {
+  display: flex;
+  gap: 16px;        /* separación izquierda / derecha */
+}
+

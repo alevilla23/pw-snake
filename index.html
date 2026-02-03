@@ -1,24 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Snake PWA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#4CAF50">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>🐍 Snake PWA</h1>
-  <canvas id="game" width="300" height="300"></canvas>
-  <p>Puntaje: <span id="score">0</span></p>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Snake PWA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4CAF50" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+<body style="background-image: url('images/retro-futuristic-abstract-hi-tech-background-vector.jpg');">
+  <div class="screen-container">
+    <h1 class="title-game">Snake Game</h1>
+    <p class="score">Puntaje: <span id="score">0</span></p>
+    <button class="button-start">Start Game</button>
+    <div class="device">
+      <canvas id="game" width="200" height="180"></canvas>
+        <div class="controls">
+          <button id="up">⬆️</button>
+          <div class="middle">
+            <button id="left">⬅️</button>
+            <button id="right">➡️</button>
+          </div>
+          <button id="down">⬇️</button>
+        </div>
+</div>
+  </div>
 
   <script src="game.js"></script>
-
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
     }
   </script>
 </body>
+
 </html>
